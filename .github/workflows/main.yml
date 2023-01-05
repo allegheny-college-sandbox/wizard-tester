@@ -24,7 +24,7 @@ jobs:
       - name: Grade
         id: grade
         run: |
-          gatorgrade --config .gatorgrade.yml >> $GITHUB_OUTPUT
+          echo "gatorgrader=$(gatorgrade --config .gatorgrade.yml)" >> $GITHUB_OUTPUT
         if: always()
         env:
           PIPENV_VENV_IN_PROJECT: 1
