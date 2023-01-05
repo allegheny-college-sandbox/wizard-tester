@@ -32,8 +32,10 @@ jobs:
       - name: ls
         run: |
           ls -la
+        if: always()
       - name: WIIIIIZARRDDDD
         id: wizard
         uses: term-world/wizard@test
+        if: always()
         with: 
           grader-result: steps.grade.output
