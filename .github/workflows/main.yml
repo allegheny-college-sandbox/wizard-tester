@@ -24,11 +24,14 @@ jobs:
       - name: Grade
         id: grade
         run: |
-          echo "gatorgrader=$(gatorgrade --config .gatorgrade.yml)" >> $GITHUB_OUTPUT
+          gatorgrade --config .gatorgrade.yml > report
         if: always()
         env:
           PIPENV_VENV_IN_PROJECT: 1
           PIPENV_IGNORE_VIRTUALENVS: 1
+      - name: ls
+        run: |
+          ls -la
       - name: WIIIIIZARRDDDD
         id: wizard
         uses: term-world/wizard@test
