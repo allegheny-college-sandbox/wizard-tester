@@ -3,18 +3,6 @@ on: [push]
 permissions: write-all
 
 jobs:
-  hello_arborist:
-    runs-on: ubuntu-latest
-    name: Introduce the Arborist!
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Arborist
-        id: arborist
-        uses: term-world/arborist@test
-    env:
-      GITHUB_TOKEN: ${{ secrets.ARBORIST }}
   hello_wizard:
     runs-on: ubuntu-latest
     name: YOU SHALL NOT PASS!
