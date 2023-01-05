@@ -1,0 +1,16 @@
+# TODO test
+
+- README.md:
+  - description: No TODO markers left in README.md
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+
+# Am I really that commited?
+
+- description: Make at least one commit, you moron
+  check: CountCommits
+  options:
+    count: 1

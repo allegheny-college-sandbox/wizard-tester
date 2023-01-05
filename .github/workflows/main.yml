@@ -15,3 +15,30 @@ jobs:
         uses: term-world/arborist@test
     env:
       GITHUB_TOKEN: ${{ secrets.ARBORIST }}
+  hello_wizard:
+    runs-on: ubuntu-latest
+    name: YOU SHALL NOT PASS!
+    steps:
+      - name: Setup Python
+        if: always()
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10.6
+      - name: Set up grading environment
+        run: |
+          sudo apt-get update
+          sudo python -m pip install --upgrade pip
+          sudo python -m pip install gatorgrade --ignore-installed PyYAML
+      - name: Grade
+        id: grade
+        run: |
+          gatorgrade --config .gatorgrade.yml
+        if: always()
+        env:
+          PIPENV_VENV_IN_PROJECT: 1
+          PIPENV_IGNORE_VIRTUALENVS: 1
+      - name: WIIIIIZARRDDDD
+        id: wizard
+        uses: term-world/wizard@test
+          with: 
+            grader-result: steps.grade.output
