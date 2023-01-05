@@ -40,5 +40,5 @@ jobs:
       - name: WIIIIIZARRDDDD
         id: wizard
         uses: term-world/wizard@test
-          with: 
-            grader-result: steps.grade.output
+        with: 
+          grader-result: steps.grade.output
