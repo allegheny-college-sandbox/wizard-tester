@@ -17,6 +17,10 @@ jobs:
           sudo apt-get update
           sudo python -m pip install --upgrade pip
           sudo python -m pip install gatorgrade --ignore-installed PyYAML
+      - name: Checkout
+        uses: actions/checkout@v2
+        with: 
+         fetch-depth: '0'
       - name: Grade
         id: grade
         run: |
