@@ -24,13 +24,14 @@ jobs:
       - name: Grade
         id: grade
         run: |
-          gatorgrade --config .gatorgrade.yml
+          gatorgrade --config .gatorgrade.yml >> $GITHUB_OUTPUT
         if: always()
         env:
           PIPENV_VENV_IN_PROJECT: 1
           PIPENV_IGNORE_VIRTUALENVS: 1
       - name: WIIIIIZARRDDDD
         id: wizard
+        needs: grade
         uses: term-world/wizard@test
         with: 
           grader-result: steps.grade.output
