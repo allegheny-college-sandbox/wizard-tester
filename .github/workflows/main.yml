@@ -3,18 +3,6 @@ on: [push]
 permissions: write-all
 
 jobs:
-  hello_arborist:
-    runs-on: ubuntu-latest
-    name: Introduce the Arborist!
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Arborist
-        id: arborist
-        uses: term-world/arborist@test
-    env:
-      GITHUB_TOKEN: ${{ secrets.ARBORIST }}
   hello_wizard:
     runs-on: ubuntu-latest
     name: YOU SHALL NOT PASS!
@@ -29,6 +17,10 @@ jobs:
           sudo apt-get update
           sudo python -m pip install --upgrade pip
           sudo python -m pip install gatorgrade --ignore-installed PyYAML
+      - name: Checkout
+        uses: actions/checkout@v2
+        with: 
+         fetch-depth: '0'
       - name: Grade
         id: grade
         run: |
@@ -40,5 +32,5 @@ jobs:
       - name: WIIIIIZARRDDDD
         id: wizard
         uses: term-world/wizard@test
-          with: 
-            grader-result: steps.grade.output
+        with: 
+          grader-result: steps.grade.output
