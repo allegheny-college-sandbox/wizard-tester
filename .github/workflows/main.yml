@@ -25,6 +25,7 @@ jobs:
         id: grade
         run: |
           gatorgrade --config .gatorgrade.yml > report
+          cat report
         if: always()
         env:
           PIPENV_VENV_IN_PROJECT: 1
