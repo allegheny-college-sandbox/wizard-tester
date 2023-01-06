@@ -30,11 +30,6 @@ jobs:
         env:
           PIPENV_VENV_IN_PROJECT: 1
           PIPENV_IGNORE_VIRTUALENVS: 1
-      - name: ls
-        run: |
-          ls -la
-          pwd
-        if: always()
       - name: WIIIIIZARRDDDD
         id: wizard
         uses: term-world/wizard@test
