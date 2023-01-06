@@ -38,3 +38,5 @@ jobs:
         id: wizard
         uses: term-world/wizard@test
         if: always()
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
