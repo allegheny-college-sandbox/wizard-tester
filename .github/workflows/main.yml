@@ -33,6 +33,7 @@ jobs:
       - name: ls
         run: |
           ls -la
+          pwd
         if: always()
       - name: WIIIIIZARRDDDD
         id: wizard
