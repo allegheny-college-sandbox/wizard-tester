@@ -26,4 +26,4 @@ Looks like we've still got some stuff to work on.
 
 ## Percent complete
 
-Based on the checks achieved, this assignment is {{pct}}% complete.
+Based on the checks achieved, this assignment is {{#checks}}{{pct}}{{/checks}}% complete.
