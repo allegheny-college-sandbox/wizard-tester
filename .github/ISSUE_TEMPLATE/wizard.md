@@ -1,7 +1,7 @@
 ---
 name: Wizard
 about: Template for Wizard reports
-title: ''
+title: 'Assignment Progress'
 labels: bug
 assignees: ''
 
