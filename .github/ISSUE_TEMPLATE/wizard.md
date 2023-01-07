@@ -17,7 +17,7 @@ Looks like we've still got some stuff to work on.
 
 {{#specifications}}
 {{#description}}
-- [ {{#status}}x{{/status}} ] {{.}}
+- [{{#status}}x{{/status}}{{^status}} {{/status}}] {{.}}
 {{/description}}
 {{/specifications}}
 {{/category}}
