@@ -34,6 +34,7 @@ jobs:
         uses: term-world/wizard@v0.2.7
         with:
           organizing-key: 'category'
+          gatorgrade-config: '.gatorgrade.yml'
         if: always()
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
