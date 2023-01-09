@@ -10,13 +10,10 @@ assignees: ''
 # `TODO`s
 
 {{#checks}}
-{{#todos}}
+{{^todos}}
 Based on the GatorGrader report for this run, here's a summary of what you've got left to do.
 {{/todos}}
-{{/checks}}
-
-{{#checks}}
-{{^todos}}
+{{#todos}}
 The latest run of the GatorGrader on this assignment says you've finished all the tasks!
 {{/todos}}
 {{/checks}}
