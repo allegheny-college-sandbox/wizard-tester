@@ -31,7 +31,7 @@ jobs:
           PIPENV_IGNORE_VIRTUALENVS: 1
       - name: WIIIIIZARRDDDD
         id: wizard
-        uses: term-world/wizard@v0.3.1
+        uses: term-world/wizard@v0.3.2
         with:
           gatorgrade-config: '.gatorgrade.yml'
         if: always()
