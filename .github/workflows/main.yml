@@ -24,7 +24,7 @@ jobs:
       - name: Grade
         id: grade
         run: |
-          gatorgrade --config .gatorgrade.yml
+          gatorgrade --config .gatorgrade.yml --report file json gatorgrade_summary.json
         if: always()
         env:
           PIPENV_VENV_IN_PROJECT: 1
@@ -34,6 +34,11 @@ jobs:
         uses: term-world/wizard@use-json-data
         with:
           gatorgrade-config: '.gatorgrade.yml'
+        if: always()
+      - name: EXPLORE
+        id: xplr
+        run: |
+          ls -la
         if: always()
     env:
       GITHUB_TOKEN: ${{ secrets.ARBORIST }}
