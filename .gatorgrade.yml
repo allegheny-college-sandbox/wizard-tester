@@ -21,3 +21,8 @@
   check: CountCommits
   options:
     count: 1000
+- description: Make at least 10000 commits, you moron
+  category: git
+  check: CountCommits
+  options:
+    count: 10000
