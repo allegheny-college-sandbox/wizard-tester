@@ -8,6 +8,14 @@
       fragment: "TODO"
       count: 0
       exact: true
+- README.md:
+  - description: We need better headings
+    category: Documentation
+    check: CountMarkdownTags
+    options:
+      tag: heading
+      count: 2
+      exact: false
 
 # Am I really that commited?
 
