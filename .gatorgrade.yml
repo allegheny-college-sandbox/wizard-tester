@@ -17,6 +17,15 @@
       count: 2
       exact: false
 
+- README.md:
+  - description: Have at least 3 TODOs
+    category: Documentation
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 3
+      exact: false
+
 # Am I really that commited?
 
 - description: Make at least one commit, you moron
