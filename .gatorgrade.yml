@@ -38,8 +38,8 @@
   check: CountCommits
   options:
     count: 1000
-- description: Make at least 99000 commits, you moron
+- description: Make at least 9987000 commits, you moron
   category: git
   check: CountCommits
   options:
-    count: 990000
+    count: 99870000
