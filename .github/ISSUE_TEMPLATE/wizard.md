@@ -24,7 +24,8 @@ Based on the GatorGrader report for this run, here's a summary of what you've go
 
 {{#specifications}}
 {{#description}}
-- [{{#status}}x{{/status}}{{^status}} {{/status}}] {{.}} {{#diagnostic}} {{diagnostic}} {{/diagnostic}}
+- [{{#status}}x{{/status}}{{^status}} {{/status}}] {{.}}
+  - {{#diagnostic}} {{diagnostic}} {{/diagnostic}}
 {{/description}}
 {{/specifications}}
 {{/category}}
