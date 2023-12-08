@@ -31,7 +31,7 @@ jobs:
           PIPENV_IGNORE_VIRTUALENVS: 1
       - name: WIIIIIZARRDDDD
         id: wizard
-        uses: term-world/wizard@add-diagnostic
+        uses: term-world/wizard@main
         with:
           gatorgrade-config: '.gatorgrade.yml'
           grader-report: 'gatorgrade_summary.json'
