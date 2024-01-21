@@ -35,6 +35,7 @@ jobs:
         with:
           gatorgrade-config: '.gatorgrade.yml'
           grader-report: 'gatorgrade_summary.json'
+          report-name: 'This: That'
         if: always()
       - name: EXPLORE
         id: xplr
