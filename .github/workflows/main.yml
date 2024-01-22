@@ -43,4 +43,5 @@ jobs:
           ls -la
         if: always()
     env:
+      GITHUB_REF_NAME: ${{ github.ref.name }}
       GITHUB_TOKEN: ${{ secrets.ARBORIST }}
